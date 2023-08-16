@@ -1,15 +1,21 @@
+'use client'
 import Image from 'next/image'
 import styles from './styles/page.module.css'
 import KodrConnect from './components/walletConnect';
+import hatching_rex_animation from './components/hatching';
+
 
 export default function Home() {
+  const animation = hatching_rex_animation();
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
+
+        <div className={styles.connect}>
         <h1 className={styles.title}>
-          Rexagotchi: v0.1.0
+          Rexagotchi: {animation}
         </h1>
-        <div >
           <KodrConnect />
         </div>
       </main>

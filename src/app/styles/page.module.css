@@ -2,6 +2,10 @@
   padding: 0 2rem;
 }
 
+.connect {
+  padding: Auto;
+}
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -30,6 +34,7 @@
 
 .title {
   margin: 0;
+  padding-bottom: 1rem;
   line-height: 1.15;
   font-size: 4rem;
   font-style: normal;
@@ -110,6 +115,7 @@
   height: 1em;
   margin-left: 0.5rem;
 }
+
 
 @media (max-width: 600px) {
   .grid {

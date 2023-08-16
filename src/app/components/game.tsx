@@ -1,4 +1,6 @@
 
+'use client'
+
 import React, { useState, useEffect } from 'react';
 import Rexagotchi from './rexagotchi';
 
@@ -32,3 +34,4 @@ const RexagotchiGame: React.FC = () => {
 };
 
 export default RexagotchiGame;
+
