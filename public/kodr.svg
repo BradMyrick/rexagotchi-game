@@ -1,0 +1,22 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#292929" />
+
+  <!-- Glowing Circles -->
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
+    <feMerge>
+      <feMergeNode in="coloredBlur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  <circle cx="250" cy="250" r="200" fill="#004080" filter="url(#glow)" />
+  <circle cx="250" cy="250" r="160" fill="#002266" filter="url(#glow)" />
+  <circle cx="250" cy="250" r="120" fill="#00194D" filter="url(#glow)" />
+  <circle cx="250" cy="250" r="80" fill="#000E33" filter="url(#glow)" />
+
+  <!-- Draw the Letter K -->
+  <path d="M150 300 L150 400 L350 400" fill="none" stroke="#FFFFFF" stroke-width="30" transform="rotate(-10, 250, 250)" />
+  <path d="M210 250 L350 120" fill="none" stroke="#FFFFFF" stroke-width="30" transform="rotate(-10, 250, 250)" />
+
+</svg>
