@@ -1,24 +1,22 @@
-'use client'
 import React, { useState, useEffect } from "react";
-const hatching_rex_animation = () => {
-    const [hatching, setHatching] = useState(true);
-    const [hatch, setHatch] = useState(false);
-    
+
+const HatchingRexAnimation = () => {
+    const [loopCount, setLoopCount] = useState(0);
+
     useEffect(() => {
         const intervalID = setInterval(() => {
-        if (hatching) {
-            setHatching(false);
-            setHatch(true);
-        }
+            setLoopCount((prevLoopCount) => prevLoopCount + 1);
         }, 5000);
-        
+
         return () => clearInterval(intervalID);
-    }, [hatching]);
-    
+    }, []);
+
     return (
-        <>v0.1.0</>
+        <>
+            <img src="https://media.giphy.com/media/G8SxYxDJHqa1q/giphy.gif" alt="Hatching T-Rex Animation" key={loopCount} />
+        </>
     );
-    
 }
 
-export default hatching_rex_animation;
+export default HatchingRexAnimation;
+
